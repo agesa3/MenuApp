@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        txt=findViewById(R.id.textView);
-//        txt.setText("");
+
 
         Collections.sort(dataItemList, new Comparator<DataItem>() {
             @Override
@@ -34,14 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 return o1.getItemName().compareTo(o2.getItemName());
             }
         });
-//        for (DataItem item: dataItemList) {
-////            txt.append(item.getItemName() + "\n");}
-//        for (DataItem item: dataItemList) {
-//            itemNames.add(item.getItemName());
-//        }
-//        Collections.sort(itemNames);
-//
-//        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,itemNames);
 
         DataItemAdapter adapter=new DataItemAdapter(this,dataItemList);
         ListView listView=findViewById(android.R.id.list);

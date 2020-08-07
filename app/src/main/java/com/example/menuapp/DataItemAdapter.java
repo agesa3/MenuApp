@@ -24,7 +24,6 @@ public class DataItemAdapter extends ArrayAdapter<DataItem> {
 
     public DataItemAdapter(@NonNull Context context, @NonNull List<DataItem> objects) {
         super(context, R.layout.list_item, objects);
-
         mDataItem = objects;
         mInflator = LayoutInflater.from(context);
     }
